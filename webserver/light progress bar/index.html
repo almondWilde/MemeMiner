@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <!-- <script src="index.js"></script> -->
+    </head>
+    <body>
+        <div class="wrapper" >
+            <div class="progressbar" id="myBar">
+                <div class="stylization"></div>
+            </div>
+        </div>
+
+    <script>
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function() {myFunction()};
+
+    function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        //document.getElementById("myBar").style.width = scrolled + "%";
+    }
+    </script>
+    </body>
+</html> 
