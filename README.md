@@ -2,7 +2,7 @@
 MemeScraper is a system for collecting memes from social media and displaying the memes in a web interface.
 
 ![Flowchart](https://github.com/almondWilde/MemeScraper/blob/main/memescraper_flowchart.jpg)
-## I. Memescraper Server ![Server Code](https://github.com/almondWilde/MemeScraper/tree/main/scraper)
+## I. Memescraper Server [Server Code](https://github.com/almondWilde/MemeScraper/tree/main/scraper)
   ### Specs and System Dependencies
     1. NVIDIA - for performance over CPU-only and compatibility with python ML libraries in dedupe() and cluster()
     2. Python3
@@ -14,16 +14,16 @@ MemeScraper is a system for collecting memes from social media and displaying th
       b. access to the web over http/https
       c. access to the meme storage
     2. dedupe()
-      a. De-Duplicating, or deduping, the Meme Storage using ![knjcode/imgdedupes](https://github.com/knjcode/imgdupes)
+      a. De-Duplicating, or deduping, the Meme Storage using [knjcode/imgdedupes](https://github.com/knjcode/imgdupes)
       b run after getMemes() to control for duplicate images which may pollute the image set
     3. clustering()
-      a. sorts the Meme Storage using ![/rohanbaisantry/image-clustering](https://github.com/rohanbaisantry/image-clustering)
+      a. sorts the Meme Storage using [/rohanbaisantry/image-clustering](https://github.com/rohanbaisantry/image-clustering)
       c. output: n clusters (as directories) of m memes randomly chosen from the Meme Storage
         i. currently n=10 and m=5000 (~500 MB)
     4. upload()
       a. uploads an m memes payload to the web server through SCP
       b. compress the payload before uploading
-  ### C. Meme Storage
+  ### C. Meme Storage 
     1. Stores all collected memes
     2. local directory Storage
     3. accessed by getMemes(), dedupe(), and clustering()
@@ -32,7 +32,7 @@ MemeScraper is a system for collecting memes from social media and displaying th
     2. cluster and upload a new meme payload nightly
       i. the Memes Storage should be large to minimize repeating memes two nights in a row
     3. Cronjobs in Linux
-## II. Web Server
+## II. Web Server [Server Code](https://github.com/almondWilde/MemeScraper/tree/main/)
   ### A. NGINX
   ### B. PHP - for image handlng
   ### C. SSH - backdoor for MemeScraper
