@@ -2,7 +2,7 @@
 MemeScraper is a system for collecting memes from social media and displaying the memes in a web interface.
 
 ![Flowchart](https://github.com/almondWilde/MemeScraper/blob/main/memescraper_flowchart.jpg)
-I. Memescraper Server ![Server Code](https://github.com/almondWilde/MemeScraper/tree/main/scraper)
+I. Memescraper Server ![Server Code](https://github.com/almondWilde/MemeScraper/tree/main/scraper)<br />
   A. Specs and System Dependencies
     1. NVIDIA - for performance over CPU-only and compatibility with python ML libraries in dedupe() and cluster()
     2. Python3
