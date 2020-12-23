@@ -33,9 +33,10 @@ MemeScraper is a system for collecting memes from social media and displaying th
       i. the Memes Storage should be large to minimize repeating memes two nights in a row
     3. Cronjobs in Linux
 ## II. Web Server [Server Code](https://github.com/almondWilde/MemeScraper/tree/main/)
-  ### A. NGINX
-  ### B. PHP - for image handlng
-  ### C. SSH - backdoor for MemeScraper
+  ### Specs
+    1. NGINX
+    2. PHP - for image handlng
+    3. SSH - backdoor for MemeScraper
 ## III. Flow - Bash in the root directory
     1. getMemes from the public internet and store them in Meme Storage
     2. deduplicate Meme Storage
