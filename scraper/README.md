@@ -1,2 +1,2 @@
-# Web Server
-Hosts meme gallery website
+# Meme Scraper
+Scrapes, Sorts, Loads memes
