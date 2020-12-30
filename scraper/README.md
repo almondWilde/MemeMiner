@@ -8,6 +8,7 @@ Scrapes, Sorts, Loads memes
     - save other encountered meme tags for later scraping
     - save meme posts to add to ig-users.txt
 ## add deduping
+## replace instaloader with instagram-scraper
 ## add a bash/python script to schedule processes
   1. scrape
   2. dedupe
