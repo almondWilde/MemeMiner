@@ -7,8 +7,9 @@ Scrapes, Sorts, Loads memes
   - [x] scrape from memes tag
     - [ ] save other encountered meme tags for later scraping
     - [ ] save meme posts to add to ig-users.txt
-## add deduping
-## [x] replace instaloader with instagram-scraper
+## dedupe image set
+## cluster image set
+## upload image clusters to web server
 ## add a bash/python script to schedule processes
   1. scrape - in progress
   2. dedupe
