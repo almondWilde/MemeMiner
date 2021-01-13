@@ -1,5 +1,3 @@
-saxes
-introvertedmebook
 lord_of.the_memes
 mimication
 unsquidables
@@ -19,3 +17,5 @@ bepiz.man
 dank_meme_bandit
 patriotic.liberal
 _liberalmemes
+saxes
+introvertedmebook

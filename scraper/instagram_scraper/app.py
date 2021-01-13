@@ -163,11 +163,13 @@ class InstagramScraper(object):
                 return
         time.sleep(secs % min_delay)
 
+
     def _retry_prompt(self, url, exception_message):
         """Show prompt and return True: retry, False: ignore, None: abort"""
         answer = input( 'Repeated error {0}\n(A)bort, (I)gnore, (R)etry or retry (F)orever?'.format(exception_message) )
         if answer:
             answer = answer[0].upper()
+            answer = 'I'
             if answer == 'I':
                 self.logger.info( 'The user has chosen to ignore {0}'.format(url) )
                 return False
@@ -216,7 +218,10 @@ class InstagramScraper(object):
                     retry = retry + 1
                     continue
                 else:
-                    keep_trying = self._retry_prompt(url, repr(e))
+                    #wk
+                    #Ignore retry prompts
+                    #keep_trying = self._retry_prompt(url, repr(e))
+                    keep_trying = False
                     if keep_trying == True:
                         retry = 0
                         continue
@@ -469,7 +474,7 @@ class InstagramScraper(object):
                 greatest_timestamp = 0
                 future_to_item = {}
 
-                username.append( usernames.pop(value) )
+                # self.username.append( usernames.pop(value) )
 
                 dst = self.get_dst_dir(value)
 
@@ -526,6 +531,7 @@ class InstagramScraper(object):
             self.quit = True
 
     def query_hashtag_gen(self, hashtag):
+        print("HASHTAG: ", hashtag)
         return self.__query_gen(QUERY_HASHTAG, QUERY_HASHTAG_VARS, 'hashtag', hashtag)
 
     def query_location_gen(self, location):
@@ -694,7 +700,7 @@ class InstagramScraper(object):
                     self.logger.error("Unable to scrape user - %s" % username)
 
         finally:
-            
+
             self.rotate_input_usernames()
             self.quit = True
             self.logout()
@@ -938,7 +944,7 @@ class InstagramScraper(object):
                     stories.extend(self.__fetch_stories(HIGHLIGHT_STORIES_REEL_ID_URL.format('%22%2C%22'.join(str(x) for x in ids_chunk)), fetching_highlights_metadata=True))
 
                 return stories
-              
+
         return []
 
     def fetch_broadcasts(self, user_id):
@@ -1105,7 +1111,7 @@ class InstagramScraper(object):
 
         if self.filter_locations:
             save_dir = os.path.join(save_dir, self.get_key_from_value(self.filter_locations, item["location"]["id"]))
-        
+
         files_path = []
 
         for full_url, base_name in self.templatefilename(item):
@@ -1408,7 +1414,7 @@ class InstagramScraper(object):
     @staticmethod
     def get_locations_from_file(locations_file):
         """
-        parse an ini like file with sections composed of headers, [locaiton], 
+        parse an ini like file with sections composed of headers, [locaiton],
         and arguments that are location ids
         """
         locations={}
@@ -1595,7 +1601,7 @@ def main():
         locations.setdefault('', [])
         locations[''] = InstagramScraper.parse_delimited_str(','.join(args.filter_location))
         args.filter_locations = locations
-        
+
     if args.media_types and len(args.media_types) == 1 and re.compile(r'[,;\s]+').findall(args.media_types[0]):
         args.media_types = InstagramScraper.parse_delimited_str(args.media_types[0])
 
