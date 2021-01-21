@@ -1,0 +1,47 @@
+2021-01-20 21:57:32,053 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CKRgzocABg3/?__a=1') on https://www.instagram.com/p/CKRgzocABg3/?__a=1
+2021-01-20 21:57:37,178 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CKRgzocABg3/?__a=1') on https://www.instagram.com/p/CKRgzocABg3/?__a=1
+2021-01-20 21:57:47,308 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CKRgzocABg3/?__a=1') on https://www.instagram.com/p/CKRgzocABg3/?__a=1
+2021-01-20 21:58:07,426 - instagram_scraper.app - WARNING - Failed to get media details for CKRgzocABg3
+2021-01-20 21:58:07,551 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CKNff0XA_kq/?__a=1') on https://www.instagram.com/p/CKNff0XA_kq/?__a=1
+2021-01-20 21:58:12,666 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CKNff0XA_kq/?__a=1') on https://www.instagram.com/p/CKNff0XA_kq/?__a=1
+2021-01-20 21:58:22,976 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CKNff0XA_kq/?__a=1') on https://www.instagram.com/p/CKNff0XA_kq/?__a=1
+2021-01-20 21:58:43,098 - instagram_scraper.app - WARNING - Failed to get media details for CKNff0XA_kq
+2021-01-20 21:58:43,213 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CKNKAGSHbzC/?__a=1') on https://www.instagram.com/p/CKNKAGSHbzC/?__a=1
+2021-01-20 21:58:48,329 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CKNKAGSHbzC/?__a=1') on https://www.instagram.com/p/CKNKAGSHbzC/?__a=1
+2021-01-20 21:58:58,440 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CKNKAGSHbzC/?__a=1') on https://www.instagram.com/p/CKNKAGSHbzC/?__a=1
+2021-01-20 21:59:18,569 - instagram_scraper.app - WARNING - Failed to get media details for CKNKAGSHbzC
+2021-01-20 21:59:18,679 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CKLh2JKAOS5/?__a=1') on https://www.instagram.com/p/CKLh2JKAOS5/?__a=1
+2021-01-20 21:59:23,792 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CKLh2JKAOS5/?__a=1') on https://www.instagram.com/p/CKLh2JKAOS5/?__a=1
+2021-01-20 21:59:33,905 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CKLh2JKAOS5/?__a=1') on https://www.instagram.com/p/CKLh2JKAOS5/?__a=1
+2021-01-20 21:59:54,043 - instagram_scraper.app - WARNING - Failed to get media details for CKLh2JKAOS5
+2021-01-20 21:59:54,183 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CKGAKxtgRyh/?__a=1') on https://www.instagram.com/p/CKGAKxtgRyh/?__a=1
+2021-01-20 21:59:59,299 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CKGAKxtgRyh/?__a=1') on https://www.instagram.com/p/CKGAKxtgRyh/?__a=1
+2021-01-20 22:00:09,414 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CKGAKxtgRyh/?__a=1') on https://www.instagram.com/p/CKGAKxtgRyh/?__a=1
+2021-01-20 22:00:29,534 - instagram_scraper.app - WARNING - Failed to get media details for CKGAKxtgRyh
+2021-01-20 22:00:29,678 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CJn5wNug-rT/?__a=1') on https://www.instagram.com/p/CJn5wNug-rT/?__a=1
+2021-01-20 22:00:34,818 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CJn5wNug-rT/?__a=1') on https://www.instagram.com/p/CJn5wNug-rT/?__a=1
+2021-01-20 22:00:44,954 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CJn5wNug-rT/?__a=1') on https://www.instagram.com/p/CJn5wNug-rT/?__a=1
+2021-01-20 22:01:05,080 - instagram_scraper.app - WARNING - Failed to get media details for CJn5wNug-rT
+2021-01-20 22:01:05,202 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CJhl9t9Ar18/?__a=1') on https://www.instagram.com/p/CJhl9t9Ar18/?__a=1
+2021-01-20 22:01:10,324 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CJhl9t9Ar18/?__a=1') on https://www.instagram.com/p/CJhl9t9Ar18/?__a=1
+2021-01-20 22:01:20,541 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CJhl9t9Ar18/?__a=1') on https://www.instagram.com/p/CJhl9t9Ar18/?__a=1
+2021-01-20 22:01:40,666 - instagram_scraper.app - WARNING - Failed to get media details for CJhl9t9Ar18
+2021-01-20 22:01:40,875 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CJXnsUYgf4q/?__a=1') on https://www.instagram.com/p/CJXnsUYgf4q/?__a=1
+2021-01-20 22:01:45,990 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CJXnsUYgf4q/?__a=1') on https://www.instagram.com/p/CJXnsUYgf4q/?__a=1
+2021-01-20 22:01:56,141 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CJXnsUYgf4q/?__a=1') on https://www.instagram.com/p/CJXnsUYgf4q/?__a=1
+2021-01-20 22:02:16,262 - instagram_scraper.app - WARNING - Failed to get media details for CJXnsUYgf4q
+2021-01-20 22:02:16,397 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CJE3ywYHoAg/?__a=1') on https://www.instagram.com/p/CJE3ywYHoAg/?__a=1
+2021-01-20 22:02:21,514 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CJE3ywYHoAg/?__a=1') on https://www.instagram.com/p/CJE3ywYHoAg/?__a=1
+2021-01-20 22:02:31,633 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CJE3ywYHoAg/?__a=1') on https://www.instagram.com/p/CJE3ywYHoAg/?__a=1
+2021-01-20 22:02:51,757 - instagram_scraper.app - WARNING - Failed to get media details for CJE3ywYHoAg
+2021-01-20 22:02:51,919 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CIoES0xgLr3/?__a=1') on https://www.instagram.com/p/CIoES0xgLr3/?__a=1
+2021-01-20 22:02:57,035 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CIoES0xgLr3/?__a=1') on https://www.instagram.com/p/CIoES0xgLr3/?__a=1
+2021-01-20 22:03:07,152 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CIoES0xgLr3/?__a=1') on https://www.instagram.com/p/CIoES0xgLr3/?__a=1
+2021-01-20 22:03:27,279 - instagram_scraper.app - WARNING - Failed to get media details for CIoES0xgLr3
+2021-01-20 22:03:27,396 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CIjEeMtnOBu/?__a=1') on https://www.instagram.com/p/CIjEeMtnOBu/?__a=1
+2021-01-20 22:03:32,508 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CIjEeMtnOBu/?__a=1') on https://www.instagram.com/p/CIjEeMtnOBu/?__a=1
+2021-01-20 22:03:42,631 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CIjEeMtnOBu/?__a=1') on https://www.instagram.com/p/CIjEeMtnOBu/?__a=1
+2021-01-20 22:04:02,753 - instagram_scraper.app - WARNING - Failed to get media details for CIjEeMtnOBu
+2021-01-20 22:04:02,902 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CH_g-nBniIF/?__a=1') on https://www.instagram.com/p/CH_g-nBniIF/?__a=1
+2021-01-20 22:04:08,030 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CH_g-nBniIF/?__a=1') on https://www.instagram.com/p/CH_g-nBniIF/?__a=1
+2021-01-20 22:04:18,146 - instagram_scraper.app - WARNING - Retry after exception HTTPError('429 Client Error: - for url: https://www.instagram.com/p/CH_g-nBniIF/?__a=1') on https://www.instagram.com/p/CH_g-nBniIF/?__a=1

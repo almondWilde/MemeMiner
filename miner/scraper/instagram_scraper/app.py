@@ -88,15 +88,14 @@ class InstagramScraper(object):
 
     def __init__(self, **kwargs):
         default_attr = dict(username='', usernames=[], visited=[], filename=None,
-                            login_user=None, login_pass=None, last_visited_user='',
-                            followings_input=False, followings_output='profiles.txt',
-                            destination='./', logger=None, retain_username=False, interactive=False,
+                            login_user=None, login_pass=None,followings_input=False, followings_output='profiles.txt',
+                            destination='./output/', logger=None, retain_username=True, interactive=False,
                             quiet=False, maximum=0, media_metadata=False, profile_metadata=False, latest=False,
                             latest_stamps=False, cookiejar=None, filter_location=None, filter_locations=None,
                             media_types=['image', 'video', 'story-image', 'story-video', 'broadcast'],
                             tag=False, location=False, search_location=False, comments=False,
                             verbose=0, include_location=False, filter=None, proxies={}, no_check_certificate=False,
-                                                        template='{urlname}', log_destination='')
+                            last_visited_user='', unique_tags={}, template='{urlname}', log_destination='')
 
         allowed_attr = list(default_attr.keys())
         default_attr.update(kwargs)
@@ -451,11 +450,6 @@ class InstagramScraper(object):
     def worker_wrapper(self, fn, *args, **kwargs):
         try:
             if self.quit:
-                #
-                #
-                #add visted users to the bottom of ig-users.txt
-                #
-                #
                 return
             return fn(*args, **kwargs)
         except:
@@ -561,8 +555,12 @@ class InstagramScraper(object):
         resp = self.get_json(url.format(params))
 
         if resp is not None:
-            payload = json.loads(resp)['data'][entity_name]
-
+            try:
+                payload = json.loads(resp)['data'][entity_name]
+            except:
+                with open('errorresp.html', 'w') as outf:
+                    outf.write(resp)
+                raise
             if payload:
                 nodes = []
 
@@ -1084,6 +1082,19 @@ class InstagramScraper(object):
                 caption_text, re.UNICODE)
             item['tags'] = list(set(item['tags']))
 
+            #wk
+            # output the extracted tags to a file
+            with open("tags.txt",'a') as outf:
+                for tag in item["tags"]:
+                    if ( tag.find("meme") != -1 ) or ( tag.find("funny") != -1 ):
+                        if ( tag not in self.unique_tags.keys() ):
+                            outf.write(tag + '\n')
+                            self.unique_tags[tag] = 1
+                        else:
+                            self.unique_tags[tag] = self.unique_tags[tag] + 1
+
+            #make a class function for writing this session's unique tags to filename
+            #run that function bofore before logout
         return item
 
     def get_original_image(self, url):
