@@ -5,8 +5,8 @@ Scrapes, Sorts, Loads memes
 ## add instagram-scraper script here
   - [x] scrape from user list (add ig-users.txt here)
   - [x] scrape from memes tag
-    - [ ] save other encountered meme tags for later scraping
-    - [ ] save meme posts to add to ig-users.txt
+    - [x] save other encountered meme tags for later scraping
+   ~~- [ ] save posts users to add to ig-users.txt~~
 ## dedupe image set
 ## cluster image set
 ## upload image clusters to web server
