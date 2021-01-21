@@ -7,9 +7,9 @@ import instagram_scraper as insta
 
 #quiet but keeps Logs
 #100 posts per Scraping
-tag_scraper = insta.InstagramScraper(login_user='memescraperproject', login_pass='8utt3r_5c0tch', interactive = False, quiet=False, maximum = 1, media_metadata=True, log_destination='logs/', latest=True,tag=True, filename='tags.txt')
+tag_scraper = insta.InstagramScraper(login_user='memescraperproject', login_pass='*********', interactive = False, quiet=False, maximum = 1, media_metadata=True, log_destination='logs/', latest=True,tag=True, filename='tags.txt')
 
-users_scraper = insta.InstagramScraper(login_user='memescraperproject', login_pass='8utt3r_5c0tch', interactive = False, quiet=False, maximum = 1, media_metadata=True, log_destination='logs/', latest=True,tag=False, filename='ig-users.txt')
+users_scraper = insta.InstagramScraper(login_user='memescraperproject', login_pass='*******', interactive = False, quiet=False, maximum = 1, media_metadata=True, log_destination='logs/', latest=True,tag=False, filename='ig-users.txt')
 
 
 #this loop will scrape by tags first then users
