@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<hmtl>
+	<head>
+		<title> Vue practice</title>
+		<!-- Style Dependency -->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+		<!-- Vue Dependency -->
+		<script src="../../Vue/Infinite Scroll/node_modules/vue/dist/vue.js"></script>
+		<!-- Vue-Infinite-Scroll Dependency -->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<!-- Axios  Dependency -->
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<!-- Vue Infinite Scroll -->
+		<script src="../../Vue/Infinite Scroll/node_modules/vue-infinite-scroll/vue-infinite-scroll.js"></script>
+		
+	</head>
+	<body> 
+		<?php
+		<!-- <iframe src="index.html"> </iframe> -->
+		<section class="section">
+		  <div id="app" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="limit">
+		  	 <ul>
+		      
+		      <li v-for="post in posts">
+		        <div class="card">
+		          <header class="card-header">
+		            <p class="card-header-title">
+		              {{ post.title }}
+		            </p>
+		          </header>
+		          <div class="card-content">
+		            <div class="content">
+		              <p> {{ post.body }} </p>
+		            </div>
+		            	<?php
+							for($i = 0; $i < 5; $i++)
+								echo "<img src=\"$i.jpg\" alt=\"$item\"/>";
+						?>
+		          </div>
+		        </div>
+		      </li>
+
+
+
+
+		    </ul>
+		  </div>
+		</section>
+		?>
+	</body>
+	<script>
+		var app = new Vue({
+          el: '#app',
+          data: {
+            posts: [],
+            limit: 10,
+            busy: false,
+         	},
+        	created(){
+      	        this.loadMore();
+        	},
+    	     methods: {
+        	    loadMore(){
+            	console.log("Adding 10 more data results");
+                	this.busy = true;
+                	axios.get('https://jsonplaceholder.typicode.com/posts').then(response => {
+                	//retreive and 10 more posts from response data into append
+                  	const append = response.data.slice(
+                    this.posts.length,
+                    this.posts.length+ this.limit
+	                );
+	                //add append to the end of posts
+	                this.posts = this.posts.concat(append);
+	                this.busy = false;
+                });
+            },
+            importAll(r){
+		        var imgs = {};
+		        r.keys().forEach(key => (imgs[key] = r(key)))
+		        this.images = imgs
+		    }
+          }
+        });
+	</script>
+		<style type="text/css">
+			body::-webkit-scrollbar {
+			  width: 1em;
+			}
+			 
+			body::-webkit-scrollbar-track {
+			  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+			}
+			 
+			body::-webkit-scrollbar-thumb {
+			  background-color: darkgrey;
+			  outline: 1px solid slategrey;
+			}
+
+			li {margin-bottom: 1rem;}
+		</style>
+</hmtl>

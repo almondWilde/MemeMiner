@@ -1,0 +1,20 @@
+#slider{
+  width:720px;
+  height:1000px;
+  overflow:hidden;
+}
+
+#slider .slides{
+  display:block;
+  width:600px;
+  height:1000px;
+  margin:0;
+  padding:0;
+}
+
+#slider .slide{
+  float:left;
+  list-style-type:none;
+  width:720px;
+  height:1000px;
+}
