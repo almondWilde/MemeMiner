@@ -12,90 +12,290 @@
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<!-- Vue Infinite Scroll -->
 		<script src="../../Vue/Infinite Scroll/node_modules/vue-infinite-scroll/vue-infinite-scroll.js"></script>
-		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
-	<body> 
-		<?php
-		<!-- <iframe src="index.html"> </iframe> -->
-		<section class="section">
-		  <div id="app" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="limit">
-		  	 <ul>
-		      
-		      <li v-for="post in posts">
-		        <div class="card">
-		          <header class="card-header">
-		            <p class="card-header-title">
-		              {{ post.title }}
-		            </p>
-		          </header>
-		          <div class="card-content">
-		            <div class="content">
-		              <p> {{ post.body }} </p>
-		            </div>
-		            	<?php
-							for($i = 0; $i < 5; $i++)
-								echo "<img src=\"$i.jpg\" alt=\"$item\"/>";
-						?>
-		          </div>
-		        </div>
-		      </li>
+	<body>
 
+		<div class="tab-panels">
+			<ul class="tabs">
+				<li rel="panel1" class="active">cluster 1</li>
+				<li rel="panel2">cluster 2</li>
+				<li rel="panel3">cluster 3</li>
+				<li rel="panel4">cluster 4</li>
+				<li rel="panel5">cluster 5</li>
+				<li rel="panel6">cluster 6</li>
+			</ul>
 
+			<div id="panel1" class="panel active">
+				<section class="section">
+				  <div id="app" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="limit">
+				  	 <ul>
+				      <li v-for="post in posts">
+				        <div class="card">
+				          <header class="card-header">
+				            <p class="card-header-title">
+				              {{ post.title }} 1
+				            </p>
+				          </header>
+				          <div class="card-content">
+				            <div class="content">
+				              <p> {{ post.body }} </p>
+				            </div>
+						   <!-- <div style="height: 100px" v-for="i in 5"> -->
+						       	<img src="images\1.png" >
+						    <!-- </div>	             -->
+				          </div>
+				        </div>
+				      </li>
+				    </ul>
+				  </div>
+				</section>
+			</div>
+			<div id="panel2" class="panel">
+				<section class="section">
+				  <div id="app" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="limit">
+				  	 <ul>
+				      <li v-for="post in posts">
+				        <div class="card">
+				          <header class="card-header">
+				            <p class="card-header-title">
+				              {{ post.title }} 2
+				            </p>
+				          </header>
+				          <div class="card-content">
+				            <div class="content">
+				              <p> {{ post.body }} </p>
+				            </div>
+						   <!-- <div style="height: 100px" v-for="i in 5"> -->
+						       	<img src="images\1.png" >
+						    <!-- </div>	             -->
+				          </div>
+				        </div>
+				      </li>
+				    </ul>
+				  </div>
+				</section>
+			</div>
+			<div id="panel3" class="panel">
+				<section class="section">
+				  <div id="app" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="limit">
+				  	 <ul>
+				      <li v-for="post in posts">
+				        <div class="card">
+				          <header class="card-header">
+				            <p class="card-header-title">
+				              {{ post.title }} 3
+				            </p>
+				          </header>
+				          <div class="card-content">
+				            <div class="content">
+				              <p> {{ post.body }} </p>
+				            </div>
+						   <!-- <div style="height: 100px" v-for="i in 5"> -->
+						       	<img src="images\1.png" >
+						    <!-- </div>	             -->
+				          </div>
+				        </div>
+				      </li>
+				    </ul>
+				  </div>
+				</section>
+			</div>
+			<div id="panel4" class="panel">
+				<section class="section">
+				  <div id="app" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="limit">
+				  	 <ul>
+				      <li v-for="post in posts">
+				        <div class="card">
+				          <header class="card-header">
+				            <p class="card-header-title">
+				              {{ post.title }} 4
+				            </p>
+				          </header>
+				          <div class="card-content">
+				            <div class="content">
+				              <p> {{ post.body }} </p>
+				            </div>
+						   <!-- <div style="height: 100px" v-for="i in 5"> -->
+						       	<img src="images\1.png" >
+						    <!-- </div>	             -->
+				          </div>
+				        </div>
+				      </li>
+				    </ul>
+				  </div>
+				</section>
+			</div>
+			<div id="panel5" class="panel">
+				<section class="section">
+				  <div id="app" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="limit">
+				  	 <ul>
+				      <li v-for="post in posts">
+				        <div class="card">
+				          <header class="card-header">
+				            <p class="card-header-title">
+				              {{ post.title }} 5
+				            </p>
+				          </header>
+				          <div class="card-content">
+				            <div class="content">
+				              <p> {{ post.body }} </p>
+				            </div>
+						   <!-- <div style="height: 100px" v-for="i in 5"> -->
+						       	<img src="images\1.png" >
+						    <!-- </div>	             -->
+				          </div>
+				        </div>
+				      </li>
+				    </ul>
+				  </div>
+				</section>
+			</div>
+			<div id="panel6" class="panel">
+				<section class="section">
+				  <div id="app" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="limit">
+				  	 <ul>
+				      <li v-for="post in posts">
+				        <div class="card">
+				          <header class="card-header">
+				            <p class="card-header-title">
+				              {{ post.title }} 6
+				            </p>
+				          </header>
+				          <div class="card-content">
+				            <div class="content">
+				              <p> {{ post.body }} </p>
+				            </div>
+						   <!-- <div style="height: 100px" v-for="i in 5"> -->
+						       	<img src="images\1.png" >
+						    <!-- </div>	             -->
+				          </div>
+				        </div>
+				      </li>
+				    </ul>
+				  </div>
+				</section>
+			</div>
+		</div>
 
-
-		    </ul>
-		  </div>
-		</section>
-		?>
 	</body>
+	<!-- jquery -->
+	<script>
+		$(function() {
+			$('.tab-panels .tabs li').on('click', function(){
+				//save tab panel as a variable to limit the scope of jquery selector
+				var $panel = $(this).closest('.tab-panels');
+
+				//remove active class from old panel tab
+				$panel.find('.tabs li.active').removeClass('active');
+				$(this).addClass('active');
+
+				//figure out which panel to show
+				var paneltoshow = $(this).attr('rel');
+
+				//hide current panel
+				$panel.find('.panel.active').slideUp(300, showNextPanel);
+
+				//removes active class from this panel and adds active to paneltoshow
+				function showNextPanel() {
+					$(this).removeClass('active');
+
+					//make new panel active
+					$('#'+paneltoshow).slideDown(300, function() {
+						$(this).addClass('active');
+					});
+				}
+				//show new poanel
+			});
+		});
+	</script>
+	<!-- Vue -->
 	<script>
 		var app = new Vue({
-          el: '#app',
-          data: {
-            posts: [],
-            limit: 10,
-            busy: false,
-         	},
-        	created(){
-      	        this.loadMore();
-        	},
-    	     methods: {
-        	    loadMore(){
-            	console.log("Adding 10 more data results");
-                	this.busy = true;
-                	axios.get('https://jsonplaceholder.typicode.com/posts').then(response => {
-                	//retreive and 10 more posts from response data into append
-                  	const append = response.data.slice(
-                    this.posts.length,
-                    this.posts.length+ this.limit
-	                );
-	                //add append to the end of posts
-	                this.posts = this.posts.concat(append);
-	                this.busy = false;
-                });
-            },
-            importAll(r){
-		        var imgs = {};
-		        r.keys().forEach(key => (imgs[key] = r(key)))
-		        this.images = imgs
-		    }
-          }
-        });
+					el: '#app',
+					data: {
+						posts: [],
+						limit: 10,
+						busy: false,
+					},
+					created(){
+								this.loadMore();
+					},
+					 methods: {
+							loadMore(){
+							console.log("Adding 10 more data results");
+									this.busy = true;
+									axios.get('https://jsonplaceholder.typicode.com/posts').then(response => {
+									//retreive and 10 more posts from response data into append
+										const append = response.data.slice(
+										this.posts.length,
+										this.posts.length+ this.limit
+									);
+									//add append to the end of posts
+									this.posts = this.posts.concat(append);
+									this.busy = false;
+								});
+						},
+						importAll(r){
+						var imgs = {};
+						r.keys().forEach(key => (imgs[key] = r(key)))
+						this.images = imgs
+				}
+					}
+				});
 	</script>
-		<style type="text/css">
+	<style type="text/css">
 			body::-webkit-scrollbar {
 			  width: 1em;
 			}
-			 
+
 			body::-webkit-scrollbar-track {
 			  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 			}
-			 
+
 			body::-webkit-scrollbar-thumb {
 			  background-color: darkgrey;
 			  outline: 1px solid slategrey;
 			}
 
-			li {margin-bottom: 1rem;}
+			.card{
+				display: block;
+			  margin-left: auto;
+			  margin-right: auto;
+			  width: 50%;
+			}
+
+			.tab-panels ul{
+				margin: 0;
+				padding: 0;
+			}
+			.tab-panels ul li{
+				list-style-type:none;
+				background:#999;
+				margin: 0;
+				padding: 3px 10px;
+				border-radius: 10px 10px 0 0;
+				color: #fff;
+				font-weight: 200;
+				cursor: poiter;
+			}
+			.tab-panels ul li:hover{
+				color: #fff;
+				background: #666;
+			}
+			.tab-panels ul li.active{
+				color: #fff;
+				background: #666;
+			}
+			.tab-panels .panel.active{
+				display:block;
+			}
+			.tab-panels .panel{
+				display:none;
+				background: #c9c9c9;
+				padding:30px;
+				border-active: 0 0 10px 10px
+			}
+
 		</style>
 </hmtl>

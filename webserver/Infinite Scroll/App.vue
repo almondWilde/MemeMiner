@@ -12,6 +12,7 @@ var app = new Vue({
             loadMore(){
               console.log("Adding 10 more data results");
                 this.busy = true;
+                //change this url to connect to scraper server to return memes (and metadata)
                 axios.get('https://jsonplaceholder.typicode.com/posts').then(response => {
                   const append = response.data.slice(
                     this.posts.length,
