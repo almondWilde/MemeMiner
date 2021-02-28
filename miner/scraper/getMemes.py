@@ -11,7 +11,12 @@ tag_scraper = insta.InstagramScraper(login_user='memescraperproject', login_pass
 
 users_scraper = insta.InstagramScraper(login_user='memescraperproject', login_pass='*******', interactive = False, quiet=False, maximum = 1, media_metadata=True, log_destination='logs/', latest=True,tag=False, filename='ig-users.txt')
 
-
+#bash test block
+with open("../cronjobs_Out.txt", 'a') as cjout:
+	cjout.write("got jobs?\n")
+	print("got jobs?")
+exit()
+#end bash test block
 #this loop will scrape by tags first then users
 for medium in ('u', 't'):
     #assign the input file
