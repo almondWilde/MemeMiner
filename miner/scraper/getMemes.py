@@ -9,9 +9,9 @@ import instagram_scraper as insta
 
 #quiet but keeps Logs
 #100 posts per Scraping
-tag_scraper = insta.InstagramScraper(login_user='memescraperproject', login_pass='*********', media_types=['image'], interactive = False, quiet=False, maximum = 50, media_metadata=True, log_destination='logs/', latest=True,tag=True, filename='tags.txt')
+tag_scraper = insta.InstagramScraper(login_user='memescraperproject', login_pass='*********', destination='output/', media_types=['image'], interactive = True, quiet=False, maximum = 50, media_metadata=False, log_destination='scraper/logs/', latest=True,tag=True, filename='scraper/tags.txt')
 
-users_scraper = insta.InstagramScraper(login_user='memescraperproject', login_pass='Bobmade1box', media_types=['image'], interactive = False, quiet=False, maximum = 50, media_metadata=True, log_destination='logs/', latest=True,tag=False, filename='ig-users.txt')
+users_scraper = insta.InstagramScraper(login_user='memescraperproject', login_pass='Bobmade1box', destination='output/', media_types=['image'], interactive = True, quiet=False, maximum = 50, media_metadata=True, log_destination='scraper/logs/', latest=True,tag=False, filename='scraper/ig-users.txt')
 
 
 #this loop will scrape by tags first then users
@@ -61,7 +61,7 @@ for medium in ('t'):
         try:
             tag_scraper.scrape_hashtag()
         except json.decoder.JSONDecodeError as e:
-            print("json error caught")
+            print("json error caught: ", e)
             break
 
         tag_scraper.save_cookies()
