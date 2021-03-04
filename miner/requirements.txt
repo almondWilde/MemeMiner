@@ -1,0 +1,8 @@
+keras
+theano
+opencv-python
+numpy
+sklearn
+shutil
+instagram-scraper
+imgdupes

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="style.css">
+      <script src="https://code.jquery.com/jquery-3.x-git.js"></script>
+  </head>
+  <body>
+    <div id='container'>
+      <div class='header'>
+        <h1 class='text-muted'> jQuery Basic Slider</h1>
+      </div>
+
+      <div id='slider'>
+        <ul class='slideContainer'>
+
+          <li class='slide'>
+            <img src='image1.jpeg' />
+          </li>
+          <li class='slide'>
+            <img src='image2.jpeg' />
+          </li>
+          <li class='slide'>
+            <img src='image3.png' />
+          </li>
+          <li class='slide'>
+            <img src='image4.jpeg' />
+          </li>
+          <li class='slide'>
+            <img src='image5.jpeg' />
+          </li>
+          <li class='slide'>
+            <img src='image6.jpeg' />
+          </li>
+
+      </ul>
+      </div>
+    </div>
+  </body>
+
+<script>
+  $(function() {
+    var width = 720 ;
+    var animationSpeed = 1000;
+    var pause = 500;
+    var currentSlide = 1;
+
+    //caching the DOM
+    var $slider = $('#slider'); //only search the DOM once
+    var $slideContainer = $slider.find('.slideContainer');
+    var $slides = $slideContainer.find('.slide');
+
+    var interval;
+
+    function startSlider(){
+      //setInterval
+      interval = setInterval(function (){
+        //animate margin-left
+        $('#slider .slideContainer').animate({'margin-left': '-='+width}, animationSpeed, function() {
+            currentSlide++;
+            console.log(currentSlide, $slides.length)
+            //if it's last slide go to position 1 (0px)
+            if(currentSlide === $slides.length){
+              currentSlide = 1;
+              $slideContainer.css('margin-left', 0);
+            }
+        });
+      }, pause);
+    }
+
+    function stopSlider(){
+      clearInterval(interval);
+    }
+    //listen for mouserenter and pause; resume on mouseleave
+    $slideContainer.on('mouseenter', stopSlider).on('mouseleave', startSlider);
+    startSlider();
+  });
+</script>
+
+</html>
